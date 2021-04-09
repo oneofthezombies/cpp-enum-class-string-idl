@@ -4,15 +4,15 @@
 python3 -m cpp_enum_class_string_idl MyEnums.yaml
 ```
 
+MyEnums.yaml
 ```yaml
-# MyEnums.yaml
 interfaces:
   - MyEnum.yaml
-  - Directions.yaml
+  - MyOtherEnum.yaml
 ```
 
+MyEnum.yaml
 ```yaml
-# MyEnum.yaml
 name: MyEnum
 type: int
 values:
@@ -20,17 +20,8 @@ values:
   - Value1
 ```
 
-```yaml
-# Directions.yaml
-name: Directions
-type: int
-values:
-  - Left
-  - Right
-```
-
+MyEnum.h
 ```cpp
-// MyEnum.h
 #pragma once
 
 /*
@@ -46,6 +37,7 @@ enum class MyEnum : int {
 const char* enum_to_string(const MyEnum value);
 ```
 
+MyEnum.cpp
 ```cpp
 #include "MyEnum.h"
 
