@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="cpp-enum-class-string-idl",
-    version="0.0.3",
+    version="0.0.4",
     license='MIT',
     author="oneofthezombies",
     author_email="hunhoekim@gmail.com",
